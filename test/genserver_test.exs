@@ -52,7 +52,7 @@ defmodule GenserverTest do
     use OtpDsl.Genserver
 
     defcast say_hello(from, name) do
-      from <- {:hello, name}
+      from |> send {:hello, name}
       noreply
     end
   end
