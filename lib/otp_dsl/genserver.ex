@@ -11,7 +11,7 @@ defmodule OtpDsl.Genserver do
 #    tracing       = Keyword.get(options, :trace,         false)
 
     quote do
-      use GenServer.Behaviour
+      use GenServer
       import unquote(__MODULE__)
 
       if unquote(register) do
